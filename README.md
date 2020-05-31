@@ -1,6 +1,6 @@
 # Predicting Customer Lifetime Value
 
-We will use past purchase history of customers to build a model that can predict the Customer Lifetime Value (CLV) for new customers
+We will use past purchase history of customers ("history.csv") to build a model that can predict the Customer Lifetime Value (CLV) for new customers
 
 ## Loading and Viewing Data
 
@@ -21,7 +21,7 @@ raw_data = pd.read_csv("history.csv")
 raw_data.dtypes
 ```
 
-The dataset consists of the customer ID, the amount the customer spent on your website for the first months of his relationship with your business and his ultimate life time value ( say 3 years worth)
+The dataset consists of the customer ID, the amount the customer spent on your website for the first months of his relationship with your business and his ultimate life time value (say 3 years worth)
 
 ```
 raw_data.head()
