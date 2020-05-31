@@ -58,25 +58,30 @@ model = LinearRegression()
 model.fit(pred_train,tar_train)
 print("Coefficients: \n", model.coef_)
 print("Intercept:", model.intercept_)
+```
+Coefficients:
+
+[33.8683337  10.28064572 15.75679795 11.85339784  7.81202598  5.1085733 ]
+
+Intercept: 42.481158660948495
 
 # Test on testing data
+```
 predictions = model.predict(pred_test)
-predictions
+print(predictions)
 
 sklearn.metrics.r2_score(tar_test, predictions)
 ```
+
 It shows a 91% accuracy. This is an excellent model for predicting CLV
 
 ## Predicting for a new Customer
 
-Let us say we have a new customer who in his first 3 months have spend 100,0,50 on your website. Let us use the model to predict his CLV.
+Let us say we have a new customer who in his first 3 months have spend 100, 0, 50 on your website. Let us use the model to predict his CLV.
 
 ```
 new_data = np.array([100,0,50,0,0,0]).reshape(1, -1)
 new_pred=model.predict(new_data) 
 print("The CLV for the new customer is : $",new_pred[0])
 ```
-The CLV for the new customer is : $ 4018.59836236
-
-# kk289-Predicting-Customer-Lifetime-Value-CLV-
-# kk289-Predicting-Customer-Lifetime-Value-CLV-
+The CLV for the new customer is : $ 4217.154
